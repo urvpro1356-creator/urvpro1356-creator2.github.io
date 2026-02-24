@@ -18,13 +18,13 @@
         }
 
         .background {
-    position: fixed;
-    inset: -10px;
-    background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHphcXB0ZWMxNmFnaWJ3a3Z3NG9qZWdqcTYxNW95eXV6cmh3Z3liayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tFbWbV3Yy9XULtCYOB/giphy.gif') center/cover no-repeat;
-    filter: blur(8px) brightness(0.5);
-    z-index: -1;
-    transition: transform 0.2s ease-out;
-}
+            position: fixed;
+            inset: -10px;
+            background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHphcXB0ZWMxNmFnaWJ3a3Z3NG9qZWdqcTYxNW95eXV6cmh3Z3liayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tFbWbV3Yy9XULtCYOB/giphy.gif'') center/cover;
+            filter: blur(8px) brightness(0.5);
+            z-index: -1;
+            transition: transform 0.2s ease-out;
+        }
 
         .loading {
             position: fixed;
@@ -191,7 +191,7 @@
     <div class="click-anywhere">Click anywhere!</div>
 
     <div class="main-content">
-        <img src="https://cdn.discordapp.com/attachments/1352153189738352714/1475001372456779939/ChatGPT_Image_Feb_21_2026_08_50_12_PM.png?ex=699be593&is=699a9413&hm=3509cbe547bd2ed3c6ff47bc68c31c37bc9baea64455c22823eaac962ad6d35e&"Jishnu Network" class="logo">
+        <img src="https://cdn.discordapp.com/attachments/1352153189738352714/1475001372456779939/ChatGPT_Image_Feb_21_2026_08_50_12_PM.png?ex=699be593&is=699a9413&hm=3509cbe547bd2ed3c6ff47bc68c31c37bc9baea64455c22823eaac962ad6d35e&" alt="Jishnu Network" class="logo">
         <h1 class="title">Welcome to FactQu Network</h1>
         <div class="links">
             <a href="https://www.youtube.com/@FactQuOfficial" target="_blank" class="link">YouTube</a>
@@ -209,7 +209,7 @@
         let timeLeft = 2;
         const countdown = setInterval(() => {
             timeLeft--;
-            loadingText.textContent = Loading: ${timeLeft}s;
+            loadingText.textContent = `Loading: ${timeLeft}s`;
             
             if (timeLeft <= 0) {
                 clearInterval(countdown);
@@ -231,7 +231,7 @@
         document.addEventListener('mousemove', (e) => {
             const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
             const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-            background.style.transform = translate(${moveX}px, ${moveY}px);
+            background.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
 
         function createDot() {
@@ -239,10 +239,10 @@
             dot.className = 'dot';
             
             const size = Math.random() * 5 + 3;
-            dot.style.width = ${size}px;
-            dot.style.height = ${size}px;
+            dot.style.width = `${size}px`;
+            dot.style.height = `${size}px`;
             
-            dot.style.left = ${Math.random() * 100}vw;
+            dot.style.left = `${Math.random() * 100}vw`;
             dot.style.top = '-10px';
             
             document.body.appendChild(dot);
@@ -250,7 +250,7 @@
             const duration = Math.random() * 3000 + 2000;
             const animation = dot.animate([
                 { transform: 'translateY(0) translateX(0)', opacity: 1 },
-                { transform: translateY(${window.innerHeight + 10}px) translateX(${(Math.random() - 0.5) * 200}px), opacity: 0 }
+                { transform: `translateY(${window.innerHeight + 10}px) translateX(${(Math.random() - 0.5) * 200}px)`, opacity: 0 }
             ], {
                 duration,
                 easing: 'linear'
